@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Caitie Taylor Front-end Developer</title>
+  <link rel="stylesheet" type="text/css" href="css/style.css">
+</head>
+<body>
+  <div class="main-container">
+      <div class="banner">
+
+        <div class="nav">
+          <p class="title">The Digital Humanitarian</p>
+            <ul class="nav-items">
+              <li><a href="#home">Home</a></li>
+              <li><a href="#Journey">About Me</a></li>
+              <li><a href="#skills">My Skills</a></li>
+              <li><a href="#cv">My Work</a></li>
+            </ul>
+        </div>
+      </div>
+    <div class="main-container">
+      <div class="card-intro">
+        <div class="bg-image">
+            <div class="clock">
+      <div class="clock-face">
+        <div class="hand hour-hand"></div>
+        <div class="hand min-hand"></div>
+        <div class="hand second-hand"></div>
+      </div>
+    </div>
+        </div>
+      </div>
+      <div class="card-journey">
+        <p class="card-journey-title"></p>
+        <img class="rounded-image" src="images/avatar3.jpg" alt="avatar">
+        <h2 class="card-journey-content"> <span style="color: #dbae32"><strong>Hi!</strong></span></h2>
+         <p>I am passionate about <strong> tech </strong> and <strong> humanitarian </strong>issues.</p>
+        <p>I love visual stories</strong>and raising awareness through those stories.</p>
+      </div>
+      <div class="card-skills">
+        <h1 class="card-skills-title"><span style="color: #dbae32"><strong>My Skills!</strong></span></h1>
+          <div class="card-skills-content">
+            <p><strong>Human rights experience:</strong> Educational equality in Qatar, women's rights and health in Bulgaria, integration and tolerance in Israel, refugee resettlement and integration in United States.</p>
+            <p><strong>Technical Profenciencies:</strong> Ruby on Rails, HTML, CSS, Bootstrap, JavaScript ES2015, SQL, git, GitHub, Heroku. XML. SPSS. Wix. Prezi Creativy. </p>
+          </div>
+      </div>
+      <div class="card-work">
+        <a name="cv"></a>
+        <h1 class="caption"><span style="color: #dbae32"><strong>My Work</strong></span></h1>
+          <div class="card-work-project">
+              <h4>Asyla</h4>
+              <img class="logo" src="images/asyla.jpg" alt="asyla">
+          </div>
+          <br></br>
+          <div class="card-work-project">
+            <h4>ANTI-Project</h4>
+            <img class="logo" src="images/ANTI.jpeg" alt="ANTI-Project logo">
+          </div>
+    </div>
+  </div>
+   <hr></hr>
+  <div class="footer"></div>
+    <footer>
+      <p><small>&copy; 2019, Digital Humanitarian, Caitie Taylor</small></p>
+      <p><small>Contact information:<a href="mailto:taylor.caitie@gmail.com?subject=Hi%20there!">taylor.caitie@gmail.com</small></p>
+    </footer>
+  </div>
+
+  <script>
+
+    const secondHand = document.querySelector('.second-hand');
+    const minsHand = document.querySelector('.min-hand');
+    const hourHand = document.querySelector('.hour-hand');
+
+
+    function setDate(){
+      const now = new Date();
+
+      const seconds = now.getSeconds();
+      const secondsDegrees = ((seconds / 60) * 360) + 90;  //the 90 degree is set to offset the default 90 degress in the css.
+      secondHand.style.transform = `rotate(${secondsDegrees}deg)`; //to apply style
+
+
+      const mins = now.getMinutes();
+      const minsDegrees = ((mins / 60) * 360) + 90;
+      minsHand.style.transform = `rotate(${minsDegrees}deg)`;
+
+      const hour = now.getHours();
+      const hourDegrees = ((mins / 12) * 360) + 90;
+      hourHand.style.transform = `rotate(${hourDegrees}deg)`;
+    }
+    setInterval(setDate, 1000);  //to set a time interval with the parameter as the setDate variable and 1000 seconds
+
+
+  </script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

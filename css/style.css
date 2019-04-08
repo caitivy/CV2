@@ -1,0 +1,35 @@
+/*--- Google Fonts --- */
+@import url("https://fonts.googleapis.com/css?family=Gilda+Display");
+
+/*--- Components Design --- */
+@import url("components/container.css");
+@import url("components/avatars.css");
+@import url("components/buttons.css");
+@import url("components/cards.css");
+@import url("components/banner.css");
+@import url("components/navigation.css");
+@import url("components/wrapper.css");
+@import url("components/footer.css");
+
+/*--- fonts and colours --- */
+
+body {
+  margin: 0 auto;
+  height: 100%;
+  box-sizing: border-box;
+  margin: 0;
+  background-color: rgb(240, 240, 240);
+-webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  -webkit-font-smoothing: antialiased;
+  height: 100%;
+  font-family: 'Raleway',sans-serif;
+}
+h1, h2, h4 , p{
+  font-family: 'Raleway',sans-serif;
+  font-weight: 500;
+  line-height: 1.1;
+}
+

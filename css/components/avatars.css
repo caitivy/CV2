@@ -1,0 +1,39 @@
+.rounded-image {
+ border-radius: 50%;
+ height: 100px;
+ width: 100px;
+ object-fit: cover;
+ padding: 10px;
+
+}
+
+.clock {
+  display: flex;
+  justify-content: center;
+  flex: 1;
+
+  align-items: center;
+  margin: -19px auto;
+}
+.clock-face {
+  align-items: center;
+  height: 150px;
+  width: 150px;
+  border: 6px solid white;
+  border-radius: 50%;
+  position: relative;
+  padding: 9px;
+  transform: translateY(42px); /* account for the height of the clock hands */
+}
+.hand {
+  width: 48%;
+  height: 4px;
+  background: black;
+  top: 50%;
+  position: absolute;
+  transform-origin: 100%;  /*by default it will begin on 50% of the cross access but this will allow you to manipulate that*/
+  transform: rotate(90deg);   /*So that it starts at 12 o'clock*/
+  transition: all 0.05s;  /*When we rotate it will transition itself*/
+  transition-timing-function: cubic-bezier(0.29, 2.7, 0.58, 1);
+
+}
